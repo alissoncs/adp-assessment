@@ -1,6 +1,5 @@
 import { MathOperationExecutionStepDto, OperationType } from "../contract/contract";
 import { TaskInterface } from "../../adapter/task-interface";
-import { AdpApi } from "../../adapter/adp-api";
 import MatchOperationRepository from "../persistence/math-operation-repository";
 
 
