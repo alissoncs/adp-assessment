@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class='bg-slate-600 py-6'>
+
+  <div class='mx-auto rounded-md bg-slate-100 max-w-4xl py-6 px-4 shadow-md'>
+    <h1 class="text-3xl mb-6 font-bold text-center">
+      Dashboard
+    </h1>
+    <div class='flex justify-between mb-6'>
+      <p>Math Operations Result: </p>
+      <p class='m-0 font-italic text-sm text-gray-400'>Use F5 to Reload page :D </p>
+    </div>
+
+    <table class='w-full'>
+      
+      <thead>
+        <tr class='text-sm'>
+          <th>
+            Date
+          </th>
+          <th>
+            Operation
+          </th>
+          <th>
+            Values
+          </th>
+          <th>
+            Result
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody class='text-sm'>
+        <% for(var i=0; i < operations.length; i++) {%>
+          <tr>
+            <td class='border-b border-sky-500 p-2'>
+              <%= operations[i].at %>
+            </td>
+            <td class='border-b border-sky-500 p-2'>
+              <span class='border border-sky-500 bg-sky-200 rounded-md text-sm px-2'>
+                <%= operations[i].operation %>
+              </span>
+            </td>
+            <td class='border-b border-sky-500 p-2'>
+              <%= operations[i].left %> and 
+              <%= operations[i].right %>
+            </td>
+            <td class='border-b border-sky-500 p-2'>
+              <%= operations[i].result %>
+            </td>
+            <td class='border-b border-sky-500 p-2'>
+              <% if(operations[i].isCorrect){ %>
+                <span class='border text-green-900 border-green-500 bg-green-200 rounded-md text-sm px-2'>
+                  OK
+                </span>
+              <% } else { %> 
+                <span class='border text-red-900 border-red-500 bg-red-200 rounded-md text-sm px-2 text-nowrap'>
+                  <%= operations[i].failureReason %>
+                </span>
+             <% } %>
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+      </div>
+
+    </table>
+  </div>
+  <script src='main.js'></script>
+</body>
+</html>
