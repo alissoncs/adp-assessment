@@ -28,4 +28,4 @@ adp accessment: Math Operations Service up and running at 3000
 - Add a better solution for cron, such as library `agenda`, instead of using the simple `setInterval`
 
 ## :bug: Bugs
-- If happens a protocol HTTP error to call ADP API it crashes the application and the setInterval stops, requiring an application cold restart :disappointed_relieved: :collision:
+- If happens a protocol HTTP error to call ADP API (such as network issues) it crashes the application and the setInterval stops, requiring an application cold restart :disappointed_relieved: :collision:
