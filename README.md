@@ -1,5 +1,19 @@
 # adp-assessment :evergreen_tree:
 
+## :hammer_and_wrench: Running
+
+```
+npm install
+npm run start
+```
+
+Logs:
+
+```
+Math operations in background. Process started
+adp accessment: Math Operations Service up and running at 3000
+```
+
 ## :rocket: Features:
 - :diamond_shape_with_a_dot_inside: Execute math operations in background every :one::zero: seconds using the Interview ADP API
 - View that loads the list of executed math operations and show its status

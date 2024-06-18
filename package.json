@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "start": "ts-node src/server.ts",
+    "start:dev": "nodemon src/server.ts",
     "test": "jest"
   },
   "devDependencies": {
