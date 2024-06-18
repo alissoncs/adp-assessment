@@ -19,9 +19,9 @@ export default class MathService {
     private readonly taskImpl: TaskInterface;
     private readonly matchOperationRepository: MatchOperationRepository;
 
-    constructor(taskImpl?: TaskInterface, matchOperationRepository?: MatchOperationRepository) {
-        this.taskImpl = taskImpl || new AdpApi();
-        this.matchOperationRepository = matchOperationRepository || new MatchOperationRepository();
+    constructor(taskImpl: TaskInterface, matchOperationRepository: MatchOperationRepository) {
+        this.taskImpl = taskImpl;
+        this.matchOperationRepository = matchOperationRepository;
     }
 
     async handleMathOperation(): Promise<MathOperationExecutionStepDto> {
