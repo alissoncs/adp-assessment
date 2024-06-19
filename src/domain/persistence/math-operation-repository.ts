@@ -12,4 +12,4 @@ export default class MathOperationRepository {
         return Promise.resolve(IN_MEMO_DATASET);
     }
 
-}
+};

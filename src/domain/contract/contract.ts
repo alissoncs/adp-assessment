@@ -8,12 +8,12 @@ export interface GetTaskResponseDto {
     operation: OperationType;
     right: number;
     left: number;
-}
+};
 
 export interface SubmitTaskResponseDto {
     ok: boolean;
     failureReason?: string;
-}
+};
 
 export interface MathOperationExecutionStepDto {
     failureReason?: string;
@@ -22,4 +22,4 @@ export interface MathOperationExecutionStepDto {
     left: number;
     result: number;
     isCorrect?: boolean;
-}
+};

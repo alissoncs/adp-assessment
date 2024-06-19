@@ -30,7 +30,7 @@ export default class MathService {
         const { left, right, operation, id } = taskResult;
 
         if (!operationMapFunction[operation]) {
-            throw new Error("Unmapped operation called " + operation);
+            throw new Error(`Unmapped operation '${operation}'`);
         }
 
         const result = operationMapFunction[operation](left, right);

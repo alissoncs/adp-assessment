@@ -1,5 +1,4 @@
 import express from 'express';
-// import handleMathOperation from './domain/service/handleMathOperation';
 import path from 'path';
 import cors from 'cors';
 import MathService from './domain/service/math-service';
@@ -32,6 +31,6 @@ app.get('/', (req, res) => {
 });
 
 
-mathService.executeMathOperationsInBackground()
+mathService.executeMathOperationsInBackground();
 
 export default app;
