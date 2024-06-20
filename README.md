@@ -17,7 +17,7 @@ adp accessment: Math Operations Service up and running at 3000
 ## :rocket: Features:
 - :diamond_shape_with_a_dot_inside: Execute math operations in background every :one::zero: seconds using the Interview ADP API
 - View that loads the list of executed math operations and show its status
-- Operations can be loaded by and rest endpoint API `GET /operations` :point_left:
+- Operations can be loaded at `GET /operations` :point_left:
 
 ## TODO 
 - Extract baseURL to an environment variable and install dotenv 
