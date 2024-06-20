@@ -26,6 +26,7 @@ adp accessment: Math Operations Service up and running at 3000
 - Add a controller layer to handle the express API calls (`app.ts` file is a little bit messy)
 - Implements a repository that persists in a real-world database, such as SqlLite (just memory usage)
 - Add a better solution for cron, such as library `agenda`, instead of using the simple `setInterval`
+- Move `dtos` to specific files to each one
 - Extract front-end to an external application using React/Angular/Vue
 
 ## :bug: Bugs

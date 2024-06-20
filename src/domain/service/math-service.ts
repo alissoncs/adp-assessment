@@ -1,6 +1,6 @@
 import { MathOperationExecutionStepDto, OperationType } from "../contract/contract";
 import { TaskInterface } from "../../adapter/task-interface";
-import MatchOperationRepository from "../persistence/math-operation-repository";
+import MathOperationRepository from "../persistence/math-operation-repository";
 
 
 export const operationMapFunction: Record<OperationType, Function> = {
@@ -16,11 +16,11 @@ export default class MathService {
     private readonly RUN_EVERY_SECONDS: number = 10;
 
     private readonly taskImpl: TaskInterface;
-    private readonly matchOperationRepository: MatchOperationRepository;
+    private readonly mathOperationRepository: MathOperationRepository;
 
-    constructor(taskImpl: TaskInterface, matchOperationRepository: MatchOperationRepository) {
+    constructor(taskImpl: TaskInterface, mathOperationRepository: MathOperationRepository) {
         this.taskImpl = taskImpl;
-        this.matchOperationRepository = matchOperationRepository;
+        this.mathOperationRepository = mathOperationRepository;
     }
 
     async handleMathOperation(): Promise<MathOperationExecutionStepDto> {
@@ -47,12 +47,12 @@ export default class MathService {
             at: new Date(),
         };
 
-        await this.matchOperationRepository.save(payload);
+        await this.mathOperationRepository.save(payload);
         return payload;
     }
 
     async findAllExecutions() {
-        return await this.matchOperationRepository.findAll();
+        return await this.mathOperationRepository.findAll();
     }
 
     async executeMathOperationsInBackground() {
