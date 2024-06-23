@@ -52,11 +52,24 @@ describe('two plus two is four', () => {
         expect(saveMethod).toBeCalledTimes(1);
     })
 
-    test('validate operationMapFunction all math operations', async () => {
+    test('validate operationMapFunction math operation: addition', async () => {
         expect(operationMapFunction['addition'](1, 1)).toEqual(2);
+    });
+
+    test('validate operationMapFunction math operation: subtraction', async () => {
         expect(operationMapFunction['subtraction'](1, 1)).toEqual(0);
+    });
+
+    test('validate operationMapFunction math operation: multiplication', async () => {
         expect(operationMapFunction['multiplication'](10, 2)).toEqual(20);
+    });
+
+    test('validate operationMapFunction math operation: division', async () => {
         expect(operationMapFunction['division'](10, 2)).toEqual(5);
+    });
+
+    test('validate operationMapFunction math operation: remainder', async () => {
+        expect(operationMapFunction['remainder'](10, 4)).toEqual(2);
     });
 
 });
