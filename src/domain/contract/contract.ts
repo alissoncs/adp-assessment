@@ -1,25 +1,27 @@
-
 export type OperationType =
-'subtraction' | 
-'division' | 'addition' | 'multiplication' | 'remainder';
+  | "subtraction"
+  | "division"
+  | "addition"
+  | "multiplication"
+  | "remainder";
 
 export interface GetTaskResponseDto {
-    id: string;
-    operation: OperationType;
-    right: number;
-    left: number;
-};
+  id: string;
+  operation: OperationType;
+  right: number;
+  left: number;
+}
 
 export interface SubmitTaskResponseDto {
-    ok: boolean;
-    failureReason?: string;
-};
+  ok: boolean;
+  failureReason?: string;
+}
 
 export interface MathOperationExecutionStepDto {
-    failureReason?: string;
-    operation: OperationType;
-    right: number;
-    left: number;
-    result: number;
-    isCorrect?: boolean;
-};
+  failureReason?: string;
+  operation: OperationType;
+  right: number;
+  left: number;
+  result: number;
+  isCorrect?: boolean;
+}
