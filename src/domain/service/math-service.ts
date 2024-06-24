@@ -62,7 +62,7 @@ export default class MathService {
   }
 
   async executeMathOperationsInBackground() {
-    console.info("Math operations in background. Process started");
+    console.info("Math operations running in the background. Process started.");
     setInterval(() => {
       this.handleMathOperation();
     }, this.RUN_EVERY_SECONDS * 1000);
